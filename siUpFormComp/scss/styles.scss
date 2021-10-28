@@ -1,0 +1,131 @@
+@import "variables";
+
+//Global
+* {
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/bg-intro-desktop.png");
+    background-color: $red !important; //Seems to be usurped by another style
+}
+
+.container {
+    max-width: 1080px;
+    margin-top: 20vh;
+}
+@media screen and (max-width: 750px) {
+    .container {
+        margin-top: 10vh;
+        max-width: 90%;
+    }
+}
+
+//H1 and copy
+h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.copy {
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 750px) {
+    h1,
+    .copy {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 750px) {
+    .h1 {
+        margin-bottom: 400px;
+    }
+}
+
+//Above form
+#try-free {
+    background-color: $blue;
+    margin-bottom: 20px;
+    padding: $button-padding;
+    text-align: center;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+#try-free-bold {
+    font-weight: 600;
+}
+
+//Form
+.form {
+    background-color: white;
+    padding: 1.5em 1.5em;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.12);
+
+    input {
+        padding: $button-padding;
+        padding-left: 1em;
+    }
+
+input:invalid {
+    border: 1px dashed $red;
+}
+
+input:valid {
+    border: 1px solid $green;
+}
+
+    .form-component {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        background-color: $green;
+        color: white;
+        font-weight: 500;
+        padding: $button-padding;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        color: $dark-blue;
+        background-color: $grayish-blue;
+    }
+
+    #t-and-c {
+        align-items: center;
+        color: $grayish-blue;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    #t-c-link {
+        text-decoration: none;
+        color: $red;
+        font-weight: 600;
+    }
+
+    #t-c-link:hover {
+        border-bottom: 1px solid $red;
+    }
+}
+
+//Footer
+footer {
+    margin-top: 30vh;
+    a {
+        text-decoration: none;
+        color: $blue;
+    }
+    a:hover {
+        border-bottom: 1px solid $blue;
+    }
+}
+@media screen and (max-width: 750px) {
+    footer {
+        margin-top: 10vh;
+    }
+}
